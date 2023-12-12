@@ -1,10 +1,8 @@
-import { AppDataSource } from "./data-source"
 import { User } from "./entity/User"
-import * as express from 'express'
+import { AppDataSource } from "./data-source"
 import { RequestRepository } from "./repositories/requestRepository";
-import { Request } from "./entity/Request";
-import { AbstractPolymorphicRepository } from "typeorm-polymorphic";
 import { MedicalCertificate } from "./entity/MedicalCertificate";
+import { AbstractPolymorphicRepository } from "typeorm-polymorphic";
 
 AppDataSource.initialize().then(async () => {
     console.log("Inserting a new user into the database...")
